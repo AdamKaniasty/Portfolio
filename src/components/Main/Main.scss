@@ -1,13 +1,6 @@
 @import "../variables.scss";
 
 .mainContainer{
-    width:100%;
-    height:210vh;
-    background-image: url("../../assets/Background2.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
     .realMain{
         width:100%;
         height:100vh;
@@ -27,5 +20,71 @@
                 font-family: 'Montserrat', sans-serif;
             }
         }
+        .logoBox{
+            position: fixed;
+            left:0;
+            top:0;
+            margin:1vw;
+            display:flex;
+            align-items:center;
+            transition: all 0.5s ease;
+            z-index: 10;
+           .logo{
+                width: 2.2vw;
+                height:2.2vw;
+                transition:.5s ease .1s;
+           }
+           h1{
+            color:rgba(255, 255, 255, 0.452);
+            font-family: 'Montserrat', sans-serif;
+            font-size:1vw;
+            margin-left:.3vw;
+            animation: nameAppear 1s forwards;
+            
+           }
+        }
+        .logoBoxAnim{
+            h1{
+                animation:nameDisappear .5s forwards;
+            }
+            .logo{
+                transform: scale(1.5,1.5)
+           }
+        }
+
+        @keyframes nameDisappear {
+            0%{
+                opacity:1;
+            }
+            100%{
+                opacity:0;                
+            }
+        }
+        @keyframes nameAppear {
+            0%{
+                opacity:0;
+            }
+            50%{
+                opacity:0;
+            }
+            100%{
+                opacity:1;
+            }
+        }
+
+        .downArrow{
+            position:absolute;
+            width:5vh;
+            bottom:5vh;
+            opacity:0.5;
+            transition:.3s;
+            
+        }
+        .downArrow:hover{
+            opacity:0.9;
+            transform: scale(1.2,1.2)
+            
+        }
+
     }
 }

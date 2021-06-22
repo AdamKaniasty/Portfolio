@@ -1,0 +1,23 @@
+.sidebarWrapper{
+    position:fixed;
+    top:0;
+    left:4.5vw;
+    width: 80vw;
+    height: 4.4vw;
+    display:flex;
+    align-items:center;
+    .item{
+        margin-right: 1vw;
+        color:white;
+        font-family: 'Montserrat', sans-serif;
+        font-weight:800;
+        font-size:1.5vw;
+    }
+    .arrow{
+        position: fixed;
+        width:4vh;
+        height:4vh;
+        color:white;
+    }
+    
+}

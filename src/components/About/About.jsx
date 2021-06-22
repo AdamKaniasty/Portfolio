@@ -1,9 +1,9 @@
 import "./About.scss"
 import {useRef,useEffect} from "react"
-import IsVisibleHook from "./Hooks/isVisible"
+import IsVisibleHook from "../Hooks/isVisible"
 
 
-export default function Main (){
+export default function About (props){
     const aboutRef = useRef()
     const isVisible = IsVisibleHook(aboutRef)
 

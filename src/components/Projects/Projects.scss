@@ -1,5 +1,65 @@
-.projectsContainer{
+.wrapper{
     width:100%;
-    height:100vh;
-    background-color: red;
+    margin-top:20vh;
+    height:150vh;
+    display:flex;
+    align-items:center;
+    .detector{
+        width:1vh;
+        height:1vh;
+    }
+}
+.curtain{
+    width:100%;
+    margin-top:20vh;
+    height:150vh;
+    display:flex;
+    justify-content:center;
+    .line{
+        position: absolute;
+        height:150vh;
+        width: .4vh;
+        background-color:rgb(255, 255, 255);
+        animation: .5s drawLine ease-in-out;
+        opacity: 0;
+    }
+    .line2{
+        position: absolute;
+        height:.4vh;
+        width: 100%;
+        background-color:rgb(255, 255, 255);
+        animation: .5s drawLine2 ease-in-out;
+
+
+    }
+    .projectsContainer{
+        width:100%;
+        height:150vh;
+        background-color: rgb(255, 255, 255);
+        animation: 1s curtainFall ease-out;
+    }
+}
+
+@keyframes drawLine2{
+    0%{
+        opacity:100;
+        width:0;
+    }
+}
+@keyframes drawLine{
+    0%{
+        opacity:100;
+        height:0;
+    }
+}
+
+@keyframes curtainFall{
+    0%{
+        display:none;
+        transform: scale(0,1);
+        
+    }
+    50%{
+        transform: scale(0,1);
+    }
 }
