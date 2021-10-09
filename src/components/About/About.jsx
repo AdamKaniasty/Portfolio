@@ -1,7 +1,8 @@
 import "./About.scss"
+import {Element } from 'react-scroll'
 import {useRef,useEffect} from "react"
 import IsVisibleHook from "../Hooks/isVisible"
-
+import FaceImg from "../../assets/Face.jpg"
 
 export default function About (props){
     const aboutRef = useRef()
@@ -18,10 +19,23 @@ export default function About (props){
         }
     },[isVisible])
     return(
-        <div className="aboutWrapper">
+        <Element name="about" className="aboutWrapper">
             <div className="aboutContainer" id="about" ref={aboutRef}>
+                <div className="aboutPhoto">
+                    <img src={FaceImg} alt="AdamKaniasty"/>
+                </div>
+                <div className="aboutText">
+                    <h1>About me</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Pellentesque eget feugiat neque. In id imperdiet ipsum. 
+                        Cras quis vulputate erat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Pellentesque eget feugiat neque. In id imperdiet ipsum. 
+                        Cras quis vulputate erat.
+                    </p>
+                </div>
             
             </div>
-        </div>
+        </Element>
     )
 }

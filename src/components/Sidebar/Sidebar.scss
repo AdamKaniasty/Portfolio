@@ -1,23 +1,41 @@
-.sidebarWrapper{
-    position:fixed;
-    top:0;
-    left:4.5vw;
-    width: 80vw;
-    height: 4.4vw;
+.sidebar{
+    position: fixed;
+    height:100vh;
+    top: 0;
+    right: 0;
     display:flex;
-    align-items:center;
-    .item{
-        margin-right: 1vw;
+    flex-direction:column;
+    justify-content:space-evenly;
+    #link{
+        writing-mode: vertical-rl;
         color:white;
-        font-family: 'Montserrat', sans-serif;
-        font-weight:800;
-        font-size:1.5vw;
+        cursor: pointer;
+        display:flex;
+        align-items:center;
+        justify-content:center;
     }
-    .arrow{
-        position: fixed;
-        width:4vh;
-        height:4vh;
-        color:white;
+    .l1{
+        flex:.7;
     }
-    
+    .l2{
+        flex:.7;
+    }
+    .l3{
+        flex:1.1;
+    }
+    .l4{
+        flex:.7;
+    }
 }
+::-webkit-scrollbar {
+    width: .3vw;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background: rgb(126, 126, 126);
+  }

@@ -1,4 +1,6 @@
 import "./Main.scss"
+import {Element,scroller } from 'react-scroll'
+
 import Logo from "../../assets/Auratus.png"
 import Arrow from "../../assets/arrow.png"
 import {useEffect} from "react"
@@ -22,7 +24,7 @@ export default function Main (props){
 
 
     return(
-        <div className="mainContainer">
+        <Element name="home" className="mainContainer">
             <div className="realMain">
                 <div className="box">
                     <h1>
@@ -34,9 +36,15 @@ export default function Main (props){
                 <div className="logoBox" id="logoBox">
                     <img src={Logo} alt="A.Kaniasty" className="logo"/>
                     <h1>Adam Kaniasty</h1>
-                </div>  
-                <img src={Arrow} alt="Adam Kaniasty" className="downArrow"></img>
+                </div> 
+                <img src={Arrow} alt="Adam Kaniasty" className="downArrow"
+                    onClick={()=>{
+                        scroller.scrollTo('about',{
+                            smooth: true,
+                        })
+                    }}
+                ></img>
             </div>
-        </div>
+        </Element>
     )
 }
