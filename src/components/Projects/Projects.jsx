@@ -29,7 +29,8 @@ export default function Projects(){
 
     if(!visible){
         const status = document.getElementById("status")
-        status.innerHTML = "Execute the cell!"
+        if (status)
+            status.innerHTML = "Execute the cell!"
     }
 
     return(

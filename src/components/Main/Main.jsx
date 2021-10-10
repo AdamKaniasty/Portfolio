@@ -1,7 +1,7 @@
 import "./Main.scss"
 import {Element,scroller } from 'react-scroll'
 
-import Logo from "../../assets/Auratus.png"
+import Logo from "../../assets/logo512.png"
 import Arrow from "../../assets/arrow.png"
 import {useEffect} from "react"
 
