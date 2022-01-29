@@ -1,120 +1,23 @@
 @import "../variables.scss";
 
-$height:auto;
+.projectsContainer{
+    padding-top:30vh;
+    height:150vh;
+    width:100%;
+    background: rgba(39, 41, 40, 0.178);
+    backdrop-filter: blur( 1vh );
+    -webkit-backdrop-filter: blur( 1vh );
 
-
-.wrapper{
-    height:$height;
-    width: 100%;
-    margin-top:20vh;
-    display: flex;
-    justify-content: center;
-    .projectsContainer{
-        height:$height;
-        margin-right: 2rem;
-        background-color:white;
-        width:100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display:flex;
-        align-items: center;
-        flex-direction:column;
-        .snippet{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width:100%;
-            :nth-child(1){
-                width:2vw;
-                height:2vw;
-                margin-right:1vh;
-                opacity:0.9;     
-                fill:rgb(181, 182, 111);          
-            }
-            :nth-child(1):hover{
-                fill:rgb(46, 206, 54);
-                cursor: pointer;
-            }
-            .input{
-                background-color:#f5f5f5;
-                border:.5vh solid #e5e5e5;
-                width:70%;
-                h1{
-                    margin:2vh;
-                    font-family: 'Roboto', sans-serif;
-                    font-weight: 300;
-                }
-            }
-        }
-        
-        #refresh{
-            margin-top:0.5vh;
-            margin-bottom: 2vh;
-            display: flex;
-            align-items: center;
-            img{
-                width:2.5vh;
-                height:2.5vh;
-            }
-            span{
-                margin:.5vh;
-                font-family: 'Roboto', sans-serif;
-                font-weight: 400;
-                opacity:0.5;
-            }
-                  
-        }
-        .refresh-animation{
-            animation:rotate 1s linear;
-            @keyframes rotate {
-                0%{
-                    transform: rotate(0deg);
-                }
-                100%{
-                    transform: rotate(360deg);
-                }
-            }
-        }
-        h1{
-            margin:5vh;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-        }
-        h2{
-            margin-bottom:5vh;
-            padding:1.2vh;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-            font-size:3.5vh;
-            border:.2vh solid black;
-            cursor: pointer;
-            transition: all .5s;
-        }
-        h2:hover{
-            border:.2vh solid rgb(173, 141, 53);
-            background:rgba(173, 141, 53, 0.336);
-            color:rgba(173, 141, 53);
-        }
-        h3{
-            font-family: 'Arial', sans-serif;
-            font-weight: 400;
-            font-size:2.5vh;
-            margin-right:1vw;
-            align-self: flex-start;
-        }
-        .snippet2{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width:100%;
-            .output{
-                background-color:#f5f5f5;
-                border:.5vh solid #e5e5e5;
-                display:flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                width:70%;
-            }
-        }
+    display:flex;
+    align-items: flex-start;
+    h1{
+        position:absolute;
+        right:8vh;
+        top:-10vh;
+        font-size:20vh;
+        color: rgba(249, 253, 251, 0.1);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        opacity: 1;
     }
 }

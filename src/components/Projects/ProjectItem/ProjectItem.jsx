@@ -1,32 +1,12 @@
-import "./ProjectItem.scss";
+import "./ProjectItem.scss"
+import { Element } from 'react-scroll'
+import {useRef,useEffect,useState} from "react"
 
-export default function ProjectItem (props){
-
-
-
-
-
-
-
-    const image = <img className="image" src={props.project.image} alt="Adam Kaniasty"/>
-
-    const text = <div className="text">
-        <h1>{props.project.title}</h1>
-        <p>{props.project.short}</p>
-    </div>
-
+export default function ProjectItem(){
+    
     return(
         <div>
-            {props.type ? 
-                <div className="projectItem">
-                    {image}
-                    {text}
-                </div>
-                :
-                <div className="projectItem"> 
-                    {text}
-                </div>
-            }
+            
         </div>
     )
 }
